@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "284910244506",
+    "project_id": "project-braillyversity",
+    "storage_bucket": "project-braillyversity.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:284910244506:android:6da1626944dc0a1ea98523",
+        "android_client_info": {
+          "package_name": "com.example.project_braillyversity"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "284910244506-l04mvgnif7f8sqftsjkq0qdeiob60ac5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.project_braillyversity",
+            "certificate_hash": "8c970b50a2d8c92995a9ec4cefc6b3a302e3bdac"
+          }
+        },
+        {
+          "client_id": "284910244506-j3dbuk1ji3h257fnvlh63o8it28lrabe.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDaTvpO3yzytiOV73rGht6IIYijahubwSI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "284910244506-j3dbuk1ji3h257fnvlh63o8it28lrabe.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
