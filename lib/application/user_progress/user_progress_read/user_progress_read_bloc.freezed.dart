@@ -533,10 +533,10 @@ class __$$FetchSuccessCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? progress = freezed,
+    Object? progress = null,
   }) {
     return _then(_$FetchSuccess(
-      freezed == progress
+      null == progress
           ? _value.progress
           : progress // ignore: cast_nullable_to_non_nullable
               as UserProgress,
@@ -562,12 +562,12 @@ class _$FetchSuccess implements FetchSuccess {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$FetchSuccess &&
-            const DeepCollectionEquality().equals(other.progress, progress));
+            (identical(other.progress, progress) ||
+                other.progress == progress));
   }
 
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(progress));
+  int get hashCode => Object.hash(runtimeType, progress);
 
   @JsonKey(ignore: true)
   @override
