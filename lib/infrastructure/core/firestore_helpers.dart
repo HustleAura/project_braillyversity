@@ -12,7 +12,3 @@ extension FirebaseFirestoreX on FirebaseFirestore {
     return collection('USERS').doc(currentUser.uniqueId.getOrCrash);
   }
 }
-
-extension DocumentReferenceX on DocumentReference {
-  CollectionReference get noteCollection => collection('DIARY_ENTRIES');
-}

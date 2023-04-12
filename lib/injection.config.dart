@@ -15,14 +15,20 @@ import 'package:get_it/get_it.dart' as _i1;
 import 'package:google_sign_in/google_sign_in.dart' as _i5;
 import 'package:injectable/injectable.dart' as _i2;
 import 'package:project_braillyversity/application/auth/auth/auth_bloc.dart'
-    as _i8;
+    as _i11;
 import 'package:project_braillyversity/application/auth/auth_ui/auth_ui_bloc.dart'
-    as _i9;
+    as _i12;
+import 'package:project_braillyversity/application/user_progress/user_progress_read/user_progress_read_bloc.dart'
+    as _i8;
+import 'package:project_braillyversity/application/user_progress/user_progress_update/user_progress_update_bloc.dart'
+    as _i10;
 import 'package:project_braillyversity/domain/auth/i_auth_facade.dart' as _i6;
+import 'package:project_braillyversity/domain/user_progress_tracker/i_progress_repository.dart'
+    as _i9;
 import 'package:project_braillyversity/infrastructure/auth/firebase_auth_facade.dart'
     as _i7;
 import 'package:project_braillyversity/infrastructure/core/firebase_injection_module.dart'
-    as _i10;
+    as _i13;
 
 extension GetItInjectableX on _i1.GetIt {
   // initializes the registration of main-scope dependencies inside of GetIt
@@ -46,10 +52,14 @@ extension GetItInjectableX on _i1.GetIt {
           gh<_i3.FirebaseAuth>(),
           gh<_i5.GoogleSignIn>(),
         ));
-    gh.factory<_i8.AuthBloc>(() => _i8.AuthBloc(gh<_i6.IAuthFacade>()));
-    gh.factory<_i9.AuthUIBloc>(() => _i9.AuthUIBloc(gh<_i6.IAuthFacade>()));
+    gh.factory<_i8.UserProgressReadBloc>(
+        () => _i8.UserProgressReadBloc(gh<_i9.IProgressRepository>()));
+    gh.factory<_i10.UserProgressUpdateBloc>(
+        () => _i10.UserProgressUpdateBloc(gh<_i9.IProgressRepository>()));
+    gh.factory<_i11.AuthBloc>(() => _i11.AuthBloc(gh<_i6.IAuthFacade>()));
+    gh.factory<_i12.AuthUIBloc>(() => _i12.AuthUIBloc(gh<_i6.IAuthFacade>()));
     return this;
   }
 }
 
-class _$FirebaseInjectionModule extends _i10.FirebaseInjectionModule {}
+class _$FirebaseInjectionModule extends _i13.FirebaseInjectionModule {}

@@ -13,5 +13,7 @@ final fullScreenWidth = fullScreenSize.width;
 final fullScreenHeight = fullScreenSize.height;
 
 // named routes
-const routeUserDashboard = '/userdashboard';
 const routeAuthPage = '/authpage';
+const routeProfilePage = '/profilepage';
+const routeCurriculumPage = '/curriculumpage';
+const routeUserDashboard = '/userdashboard';

@@ -28,25 +28,3 @@ Either<ValueFailure<String>, String> validatedPassword(String input) {
     return right(input);
   }
 }
-
-Either<ValueFailure<String>, String> validatedDiaryTitle(String input) {
-  int titleLength = input.length;
-  if ((titleLength == 0) || (titleLength > 20)) {
-    return left(
-      InvalidTitle(failedValue: input),
-    );
-  } else {
-    return right(input);
-  }
-}
-
-Either<ValueFailure<String>, String> validatedDiaryBody(String input) {
-  int titleLength = input.length;
-  if (titleLength > 0) {
-    return right(input);
-  } else {
-    return left(
-      EmptyEntry(failedValue: input),
-    );
-  }
-}

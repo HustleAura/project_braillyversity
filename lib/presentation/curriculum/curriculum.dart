@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:project_braillyversity/presentation/core/constants.dart';
 
-class UserDashboard extends StatelessWidget {
-  const UserDashboard({super.key});
+class CurriculumPage extends StatelessWidget {
+  const CurriculumPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -20,17 +19,15 @@ class UserDashboard extends StatelessWidget {
                   height: 200,
                   width: 200,
                   child: TextButton(
-                    child: const Text('curriculum'),
-                    onPressed: () {
-                      Navigator.pushNamed(context, routeCurriculumPage);
-                    },
+                    child: const Text('Alphabets'),
+                    onPressed: () {},
                   ),
                 ),
                 Container(
                   height: 200,
                   width: 200,
                   child: TextButton(
-                    child: const Text('Assessment'),
+                    child: const Text('Numbers'),
                     onPressed: () {},
                   ),
                 ),
@@ -46,10 +43,8 @@ class UserDashboard extends StatelessWidget {
                   height: 200,
                   width: 200,
                   child: TextButton(
-                    child: const Text('Profile'),
-                    onPressed: () {
-                      Navigator.pushNamed(context, routeProfilePage);
-                    },
+                    child: const Text('Braille Cells'),
+                    onPressed: () {},
                   ),
                 ),
                 Container(
